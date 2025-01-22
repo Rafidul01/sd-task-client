@@ -5,7 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 const ReportShow = ({ data: chartData, loading }) => {
   if (loading) {
     return <div className="flex justify-center items-center flex-col w-full">
-    {/* Skeleton for loading chart */}
+    
     <div className="w-[80%] " style={{ height: 400 }}>
       <Skeleton height="100%" width="100%" />
     </div>
