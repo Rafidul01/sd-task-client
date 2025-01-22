@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import ShowCard from "../components/ShowCard";
+import TableShow from "../components/TableShow";
 
 const ContentPage = () => {
     const [data, setData] = useState([]);
@@ -30,6 +31,9 @@ const ContentPage = () => {
 
             {
                 type === "collection" && <ShowCard data={data} loading={loading}/>
+            }
+            {
+                type === "sells" && <TableShow data={data} loading={loading}/>
             }
             
         </div>
