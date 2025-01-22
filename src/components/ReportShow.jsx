@@ -1,9 +1,18 @@
 import React from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const ReportShow = ({ data: chartData, loading }) => {
   if (loading) {
-    return <p>loading...</p>;
+    return <div className="flex justify-center items-center flex-col w-full">
+    {/* Skeleton for loading chart */}
+    <div className="w-[80%] " style={{ height: 400 }}>
+      <Skeleton height="100%" width="100%" />
+    </div>
+    <p>
+      <span className="font-bold">Loading:</span> Preparing today's sell report...
+    </p>
+  </div>;
   }
 
   console.log(chartData[0].items.length);

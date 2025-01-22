@@ -39,6 +39,12 @@ const ContentPage = () => {
             {
                 type === "report" && <ReportShow data={data} loading={loading}/>
             }
+            {
+                type === "settings" && <div className="py-40 uppercase text-center text-4xl font-bold text-rose-300 ">
+                    <p className="">Coming soon ...</p>
+                    
+                </div>
+            }
             
         </div>
     );
