@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
+import { RouteContext } from "../provider/RouteProvider";
 
 const Navbar = () => {
   const [routes, setRoutes] = useState([]);
   const axiosSecure = useAxiosSecure();
+  const { setCurrentRoute } = useContext(RouteContext);
 
   useEffect(() => {
     axiosSecure
@@ -39,7 +41,7 @@ const Navbar = () => {
                             <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 z-10">
                               {subnav.routes.map((subSubNav, k) => (
                                 <li key={k}>
-                                  <Link to="#">{subSubNav.name}</Link>
+                                  <Link to="#" onClick={() => setCurrentRoute(subSubNav)}>{subSubNav.name}</Link>
                                 </li>
                               ))}
                             </ul>
@@ -47,7 +49,7 @@ const Navbar = () => {
                         </>
                       ) : (
                         <>
-                          <Link to="#">{subnav.name}</Link>
+                          <Link to="#" onClick={() => setCurrentRoute(subnav)}>{subnav.name}</Link>
                         </>
                       )}
                     </li>
@@ -57,7 +59,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to="#">{route.name}</Link>
+              <Link to="#" onClick={() => setCurrentRoute(route)}>{route.name}</Link>
             </>
           )}
         </li>
