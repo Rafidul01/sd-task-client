@@ -99,8 +99,8 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLink}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Cart</a>
+      <div className="navbar-end hidden md:flex">
+        <a className="btn bg-green-500 text-white">Login</a>
       </div>
     </div>
   );

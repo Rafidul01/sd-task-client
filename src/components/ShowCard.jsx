@@ -46,11 +46,11 @@ const ShowCard = ({ data, loading }) => {
       <div className=" p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
         {items.map((item, i) => (
           <div className="card bg-base-100   border border-green-500 shadow-md">
-            <figure className="px-6 pt-6">
+            <figure className="px-6 pt-6 h-64 w-full">
               <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                src={item.img}
                 alt={item.name}
-                className="rounded-xl"
+                className="rounded-xl h-full w-full"
               />
             </figure>
             <div className="card-body  ">

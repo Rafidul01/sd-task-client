@@ -7,7 +7,7 @@ const TableShow = ({ data, loading }) => {
      <div className="flex justify-center items-center">
         <div className="w-full">
           <div className="overflow-x-auto p-4 mx-auto">
-            <table className="table border-2 border-black bg-gray-200">
+            <table className="table overflow-x-auto border-2 border-black bg-gray-200">
               {/* Skeleton Table Head */}
               <thead>
                 <tr className="text-center text-xl text-rose-400 border-b-2 border-black">
@@ -56,7 +56,7 @@ const TableShow = ({ data, loading }) => {
     <div className="flex justify-center item-center">
       <div className="w-full" >
         <div className="overflow-x-auto p-4 mx-auto">
-          <table className="table border-2 border-black bg-gray-200">
+          <table className="table bg-gray-200  rounded-xl ">
             {/* head */}
             <thead>
               <tr className="text-center text-xl text-rose-400 border-b-2 border-black">
