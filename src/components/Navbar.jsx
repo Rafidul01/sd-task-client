@@ -41,7 +41,7 @@ const Navbar = () => {
                             <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 z-10">
                               {subnav.routes.map((subSubNav, k) => (
                                 <li key={k}>
-                                  <Link to="#" onClick={() => setCurrentRoute(subSubNav)}>{subSubNav.name}</Link>
+                                  <Link to={`/contentPage/${subSubNav.category}/${subSubNav.type}`} onClick={() => setCurrentRoute(subSubNav)}>{subSubNav.name}</Link>
                                 </li>
                               ))}
                             </ul>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         </>
                       ) : (
                         <>
-                          <Link to="#" onClick={() => setCurrentRoute(subnav)}>{subnav.name}</Link>
+                          <Link to={`/contentPage/${subnav.category}/${subnav.type}`} onClick={() => setCurrentRoute(subnav)}>{subnav.name}</Link>
                         </>
                       )}
                     </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to="#" onClick={() => setCurrentRoute(route)}>{route.name}</Link>
+              <Link to={`/contentPage/${route.category}/${route.type}`} onClick={() => setCurrentRoute(route)}>{route.name}</Link>
             </>
           )}
         </li>
