@@ -25,9 +25,9 @@ const ContentPage = () => {
 
 
     return (
-        <div>
+        <div className="mx-auto">
 
-            <p className="uppercase">{category!==type ? category + " " + type: category}</p>
+            <p className="p-8 uppercase text-center text-4xl text-green-600 font-bold">{category!==type ? category + " " + type: category}</p>
 
             {
                 type === "collection" && <ShowCard data={data} loading={loading}/>
